@@ -25,7 +25,7 @@ const Signin = () => {
       console.log(response.data);
       alert('Signin successful!');
       localStorage.setItem('email', response.data.email);
-      navigate('/');
+      navigate('/home');
     } catch (error) {
       console.error('Error signing in:', error);
       if (error.response) {

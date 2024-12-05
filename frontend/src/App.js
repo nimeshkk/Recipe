@@ -1,8 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Signup from './components/Sign Up/signup';
 import Signin from './components/Sign In/Signin';
+import Home from './components/Home/home';
+import CategoriesList from './components/CategoriesList/CategoriesList';
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Signup />} />
         <Route path="signin" element={<Signin />} />
+        <Route path="home" element={<Home />} />
+        <Route path="categorieslist" element={<CategoriesList />} />
       </Routes>
     </BrowserRouter>
   );
