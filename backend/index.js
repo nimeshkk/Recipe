@@ -12,7 +12,7 @@ app.use(cors());
 
 
 
-app.post('/register', async (req, res) => {
+app.post('/api/register', async (req, res) => {
     User.create(req.body)
     .then(register =>res.json(register))
     .catch(err => res.status(400).json('Error: ' + err))
@@ -21,7 +21,7 @@ app.post('/register', async (req, res) => {
 
 
 
-app.post('/login', async (req, res) => {
+app.post('/api/login', async (req, res) => {
     const { email, password } = req.body;
     const user = await User
     .findOne
@@ -36,6 +36,10 @@ app.post('/login', async (req, res) => {
     
 }
 );
+
+app.get('/', async (req, res) => {
+    res.json('Hello World');
+});
 
 
 
