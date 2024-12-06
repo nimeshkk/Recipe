@@ -29,7 +29,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/register",
+        "https://recipeprojectfront.vercel.app/register",
         formData
       );
       console.log("Signup successful:", response.data);
