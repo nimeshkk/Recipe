@@ -36,6 +36,11 @@ app.post('/login', async (req, res) => {
 }
 );
 
+app.get('/', async (req, res) => {
+    
+    res.json('Hello');
+});
+
 
 connectDB();
 app.listen(3001, () => {
