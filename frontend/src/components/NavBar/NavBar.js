@@ -46,7 +46,7 @@ const NavBar = () => {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      
       {isMenuOpen && (
         <div className="md:hidden">
           <div className="flex flex-col space-y-4 mt-4">

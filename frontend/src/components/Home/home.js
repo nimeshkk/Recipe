@@ -9,7 +9,7 @@ const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState("Beef");
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState(""); // New state for message
+  const [message, setMessage] = useState(""); 
   const navigate = useNavigate();
 
   useEffect(() => {

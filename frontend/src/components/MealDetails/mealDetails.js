@@ -32,7 +32,7 @@ const MealDetails = () => {
                 <h1 className="text-2xl font-bold text-center text-black">{meal.strMeal}</h1>
             </header>
 
-            {/* Meal Image */}
+           
             <div className="my-4 flex justify-center">
                 <img
                     src={meal.strMealThumb}
@@ -42,9 +42,9 @@ const MealDetails = () => {
             </div>
 
 
-            {/* Meal Details */}
+           
             <div className="px-4 md:px-20 lg:px-32 py-4">
-                {/* Category and Area */}
+                
                 <div className="flex flex-wrap justify-between text-gray-700 text-lg mb-6">
                     <p>
                         <strong>Category:</strong> {meal.strCategory}
@@ -54,7 +54,7 @@ const MealDetails = () => {
                     </p>
                 </div>
 
-                {/* Instructions */}
+                
                 <section>
                     <h2 className="text-2xl font-semibold text-gray-800 mb-4">Instructions</h2>
                     <p className="text-gray-700 leading-relaxed">{meal.strInstructions}</p>
