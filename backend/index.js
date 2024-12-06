@@ -10,19 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use(cors(
-    {
-        origin: 'https://recipeprojectapi.vercel.app',
-        methods: ['GET', 'POST'],
-        credentials: true
-    }
-));
 
-mongoose.connect('mongodb+srv://slhit2021:EqLTOtvBfTUzSM11@cluster0.oyd0q.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
-
-
-
-app.post('/api/register', async (req, res) => {
+app.post('/register', async (req, res) => {
     User.create(req.body)
     .then(register =>res.json(register))
     .catch(err => res.status(400).json('Error: ' + err))
@@ -31,7 +20,7 @@ app.post('/api/register', async (req, res) => {
 
 
 
-app.post('/api/login', async (req, res) => {
+app.post('/login', async (req, res) => {
     const { email, password } = req.body;
     const user = await User
     .findOne
@@ -46,11 +35,6 @@ app.post('/api/login', async (req, res) => {
     
 }
 );
-
-app.get('/', async (req, res) => {
-    res.json('Hello World');
-});
-
 
 
 connectDB();
