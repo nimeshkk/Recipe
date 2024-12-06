@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import NavBar from "../NavBar/NavBar";
 
 const CategoriesList = () => {
   const [categories, setCategories] = useState([]);
@@ -23,6 +24,8 @@ const CategoriesList = () => {
   }, []);
 
   return (
+    <>
+    <NavBar/>
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold text-center mb-6">Top Categories</h1>
 
@@ -43,6 +46,7 @@ const CategoriesList = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
