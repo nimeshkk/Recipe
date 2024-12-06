@@ -20,7 +20,7 @@ const Signin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://recipeprojectapi.vercel.app/?vercelToolbarCode=5RXkffvcq5RPGZA/login", formData);
+      const response = await axios.post("https://recipeprojectapi.vercel.app/login", formData);
       console.log(response.data);
       alert("Signin successful!");
       localStorage.setItem("email", response.data.email);

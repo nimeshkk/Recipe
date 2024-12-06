@@ -29,7 +29,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://recipeprojectapi.vercel.app/?vercelToolbarCode=5RXkffvcq5RPGZA/register",
+        "https://recipeprojectapi.vercel.app/register",
         formData
       );
       console.log("Signup successful:", response.data);
